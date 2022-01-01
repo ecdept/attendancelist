@@ -107,6 +107,7 @@ class HomeScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text('Total Hours:$totalhour'),
+                             // Divider(height: 5,),
                               Text(' R.Nos    Percentage',style: TextStyle(color:Colors.orange ),),
 
                               ...newlist,
