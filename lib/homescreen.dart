@@ -7,8 +7,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 
 import 'main.dart';
-final namecontrlr = TextEditingController();
-final markcontrlr = TextEditingController();
+final datecontrlr = TextEditingController();
+final attendancecontrlr = TextEditingController();
 final _formKey=GlobalKey<FormState>();
 
 class HomeScreen extends StatelessWidget {
@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
                     return 'Enter Date in DD/MM/YYYY format';
                   }
                 },
-                controller: namecontrlr,
+                controller: datecontrlr,
                 decoration: const InputDecoration(
                   hintText: 'Date(DD/MM/YYYY)',
                   border: OutlineInputBorder(),
@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                     return 'Enter roll nos separated by coma';
                   }
                 },
-                controller: markcontrlr,
+                controller: attendancecontrlr,
                 decoration: const InputDecoration(
                   hintText: 'Enter Absentees Roll Nos(eg: 1,2)',
                   border: OutlineInputBorder(),
@@ -157,8 +157,8 @@ class HomeScreen extends StatelessWidget {
   }
 
   Future<void> savemarkstodb()async {
-    final date=namecontrlr.text;
-    final attendance=markcontrlr.text;
+    final date=datecontrlr.text;
+    final attendance=attendancecontrlr.text;
     var mk=attendance.toString();
     List<String> attendancelist=mk.split(",");
 
