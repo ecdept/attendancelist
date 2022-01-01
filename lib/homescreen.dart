@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text('ATTENDANCE CALCULATOR'),
         actions: [
           IconButton(onPressed: () {
@@ -99,7 +100,7 @@ class HomeScreen extends StatelessWidget {
 
                         allrollnos.clear();
                         return AlertDialog(
-                          title: Text('       Final Attendance'),
+                          title: Center(child: Text('Final Attendance')),
 
                           content: Column(
 
